@@ -1,0 +1,25 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle (click)="changeMenu(MENU.MATERIAL)">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+            <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="container transparent-header" padding>
+
+    <div class="card-profile_visual"></div>
+    <div class="card-profile_user-infos">
+      <span class="infos_name">{{ email }}</span>
+    </div>
+  
+  <ion-searchbar></ion-searchbar>
+  <ion-list >
+    <ion-item *ngFor="let item of clinicsList; let i = index">
+      {{ item.clinic_name }}
+    </ion-item>
+  </ion-list>
+
+</ion-content>
